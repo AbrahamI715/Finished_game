@@ -6,7 +6,7 @@ from add_on import import_folder
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, enemies_group: pygame.sprite.Group(), coin_group: pygame.sprite.Group(),
                  item_box_group: pygame.sprite.Group(), left_turn_group: pygame.sprite.Group(),
-                 right_turn_group: pygame.sprite.Group()):
+                 right_turn_group: pygame.sprite.Group(), skelly_group: pygame.sprite.Group() ):
         super().__init__()
         self.character_assets()
         self.frame_index = 0  # used to pick out one of the anim frames
@@ -49,6 +49,7 @@ class Player(pygame.sprite.Sprite):
         self.item_box_group = item_box_group
         self.left_turn_group = left_turn_group
         self.right_turn_group = right_turn_group
+        self.skelly_group = skelly_group
 
         # will also be updated in update()
         self.player_kills = 0
@@ -140,6 +141,7 @@ class Player(pygame.sprite.Sprite):
                 coin.kill()
                 print("collected coin")
                 self.player_coins += 1
+
 
         enemy_collisions = pygame.sprite.spritecollide(self, self.enemies_group, False)
         if self.attacking and self.ready_to_attack:

@@ -1,30 +1,30 @@
 level_map1 = [
-'                                      ',
-'                                CC    ',
-'                                XX    ',
-'  L E   R            L   E  R         ',
-'  XXXXXXX            XXXXXXXX  CC     ',
-'  DDDDDDDX        X            XXX    ',
-'  DDDD                    C           ',
-'         L    C   ER     XXX          ',
-'         XXXXXXXXXXX    XDDDXXX      C',
-'    P    DDDDDDDDDDDX   DDDDDDDXX    C',
-'    XXXXXDDDDDDDDDDDDLERDDDDDDDDD    C',
-'XXXXDDDDDDDDDDDDDDDDDXXXDDDDDDDDDXX XX']
+'                                        ',
+'                                CC     S',
+'                                XX   XXX',
+'  L E   R            L   E  R           ',
+'  XXXXXXX            XXXXXXXX  CC       ',
+'  DDDDDDDX        X            XXX      ',
+'  DDDD                    C             ',
+'         L    C   ER     XXX            ',
+'         XXXXXXXXXXX    XDDDXXX      C  ',
+'    P    DDDDDDDDDDDX   DDDDDDDXX    C  ',
+'    XXXXXDDDDDDDDDDDDLERDDDDDDDDD    C  ',
+'XXXXDDDDDDDDDDDDDDDDDXXXDDDDDDDDDXX XX  ']
 
 level_map2 = [
-'                               CCI              ',
-'                          C    XXX              ',
-'  L C   P    ER      C     X                    ',
-'  XXXXXXXXXXXXX     X     X                     ',
-'  DDDDDDDDDD        D     D    L ER             ',
-'  DDDDDDDDDD      XXD          XXXX         CCCC',
-'                              XDDDDX        CCCC',
-'         L        ER      XXXXDDDDDD        XXXX',
-'         XXXXXXXXXXX      DDDDDDDDDDX           ',
-'    LECCRDDDDDDDDDDDX              DDX          ',
-' I  XXXXXDDDDDDDDDDDDXL   E CCCCC RDDD          ',
-'XXXXDDDDDDDDDDDDDDDDDDXXXXXXXXXXXXXDDD          ']
+'                               CCI                ',
+'                          C    XXX                ',
+'  L C   P    ER      C     X                      ',
+'  XXXXXXXXXXXXX     X     X                       ',
+'  DDDDDDDDDD        D     D    L ER               ',
+'  DDDDDDDDDD      XXD          XXXX         CCCC  ',
+'                              XDDDDX        CCCC S',
+'         L        ER      XXXXDDDDDD        XXXX X',
+'         XXXXXXXXXXX      DDDDDDDDDDX             ',
+'    LECCRDDDDDDDDDDDX              DDX            ',
+' I  XXXXXDDDDDDDDDDDDXL   E CCCCC RDDD            ',
+'XXXXDDDDDDDDDDDDDDDDDDXXXXXXXXXXXXXDDD            ']
 
 level_map3 = [
 '                                        XXX  XXXXXXXXXXX',
@@ -34,8 +34,8 @@ level_map3 = [
 'DDDDDX     C              C     XXX         X      XXX  ',
 '          XX         C   XXX    DDDX              XDDDX ',
 '          DD        XXX                                 ',
-'          DD    X                                       ',
-'  CCC   XXDD    D           L E  R                      ',
+'          DD    X                                     S ',
+'  CCC   XXDD    D           L E  R                   XX ',
 '  XXXCC        XD     XX    XXXXXX                      ',
 'I DDDXXL   E  RDD          XDDDDDDCC                    ',
 'XXDDDDDXXXXXXXXXXXX      XXDDDDDDDXXX                   ']
@@ -55,18 +55,18 @@ level_map4 = [
 'XXDDDDDXXXXXXXXDD         XDDDDDDDXXX']
 
 level_map5 = [
-'          CCC XXXXXXXXXXXL C CEC C R                            ',
-'         XXXXXDDDDDDDDDDDXXXXXXXXXXX   I                        ',
-'      XXXDDDDDDDD       DDDDDDDDDDDDXXXXXX              C C     ',
-'       DDDD                        DDDDDDD             C   C    ',
-'       DDDDL  E R            C          DD              CCC     ',
-'        DDDXXXXXX      X     X      C       C                   ',
-'        DD                          X       X                   ',
-'         DL ER                     XD   X                       ',
-'         DXXXX                                                  ',
-'                                                 L  C C E C C  R',
-'PL   E  R                                        XXXXXXXXXXXXXXX',
-'XXXXXXXXX      XX                                 DDDDDDDDDDDDD ']
+'          CCC XXXXXXXXXXXL C CEC C R                               ',
+'         XXXXXDDDDDDDDDDDXXXXXXXXXXX   I                           ',
+'      XXXDDDDDDDD       DDDDDDDDDDDDXXXXXX              C C        ',
+'       DDDD                        DDDDDDD             C   C       ',
+'       DDDDL  E R            C          DD              CCC        ',
+'        DDDXXXXXX      X     X      C       C                      ',
+'        DD                          X       X                      ',
+'         DL ER                     XD   X                          ',
+'         DXXXX                                                     ',
+'                                                 L  C C E C C  R  S',
+'PL   E  R                                        XXXXXXXXXXXXXXX XX',
+'XXXXXXXXX      XX                                 DDDDDDDDDDDDD    ']
 
 
 tile_size = 60

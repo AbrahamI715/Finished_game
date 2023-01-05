@@ -7,6 +7,7 @@ from file_interactions import FileInteractions
 from enemy import Enemy
 from coins import Coins
 from crate import ItemBox
+from skelly import Skelly
 from Left_tile import Left_turntile
 from Right_tile import Right_turntile
 from settings import tile_size, screen_width
@@ -28,6 +29,7 @@ class TestLevelState:
         self.item_box = pygame.sprite.Group()
         self.left_tile = pygame.sprite.Group()
         self.right_tile = pygame.sprite.Group()
+        self.skelly = pygame.sprite.Group()
         self.coin = pygame.sprite.Group()
         self.player = None
 
@@ -103,6 +105,11 @@ class TestLevelState:
                 right.kill()
         right = []
 
+        for skull in self.skelly:
+            if skull is not None:
+                skull.kill()
+        skull = []
+
         self.player = None
 
         self.background_images = []
@@ -127,7 +134,7 @@ class TestLevelState:
                     tile = TileDirt((x, y), tile_size, 0, 0, tile_set_image)
                     self.tiles.add(tile)
                 elif cell == 'P':
-                    self.player = Player((x, y), self.enemies, self.coin, self.item_box, self.left_tile, self.right_tile)
+                    self.player = Player((x, y), self.enemies, self.coin, self.item_box, self.left_tile, self.right_tile, self.skelly)
                     self.player_group.add(self.player)
                 elif cell == 'E':
                     enemy = Enemy((x, y + 20), self.enemies)
@@ -144,6 +151,9 @@ class TestLevelState:
                 elif cell == 'R':
                     right = Right_turntile((x, y), self.right_tile)
                     self.right_tile.add(right)
+                elif cell == 'S':
+                    skull = Skelly((x, y), self.skelly)
+                    self.skelly.add(skull)
 
         for i in range(1, 4):
             self.background_image = pygame.transform.smoothscale(
@@ -244,10 +254,17 @@ class TestLevelState:
         self.item_box.update(self.world_shift)
         self.left_tile.update(self.world_shift)
         self.right_tile.update(self.world_shift)
+        self.skelly.update(self.world_shift)
         # player
         self.player_group.update(time_delta)
         self.vert_collision()
         self.horiz_collision()
+
+        for sprite in self.skelly.sprites():
+            if sprite.rect.colliderect(player.collision_rect):
+               print("Level finish!")
+               self.time_to_switch = True
+               self.state_to_switch_to_id = "level_2"
 
         for sprite in self.enemies.sprites():
             if sprite.rect.colliderect(player.collision_rect):
@@ -275,6 +292,7 @@ class TestLevelState:
         self.basic_health()
         self.draw_text("coins collected: " + str(self.player.player_coins), self.font_score, self.white, 25, 25)
         self.draw_text("(press r to reset)", self.font_score_2, self.white, 25, 45)
+        self.skelly.draw(self.display_surface)
         self.enemies.draw(self.display_surface)
         self.item_box.draw(self.display_surface)
         self.coin.draw(self.display_surface)
